@@ -19,9 +19,11 @@ get "/where" do
 end
 
 get "/here" do
+  callback = "";
   url = "something went wrong"
   unless params[:url].nil?; url = params[:url]; end
+  unless params[:callback].nil?; callback = params[:callback]; end
   Url.create(:url => url)
 
-  return "({'success':1})"
+  return "#{callback}({'success':1})"
 end
