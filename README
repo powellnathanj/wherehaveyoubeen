@@ -1,0 +1,4 @@
+This is a Sinatra ditty that works with my Greasemonkey script (http://github.com/slaney/userscripts/tree/master) xss.
+
+That script sends every url you visit to a webservice, this can be used as that web service.
+
