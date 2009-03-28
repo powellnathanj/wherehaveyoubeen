@@ -1,12 +1,13 @@
-<table>
+<table id="where_table" name="where_table">
   <tr>
     <td>
     </td>
   </tr>
-<% @urls.each do |url| %>
+<% @urls.each do |uri| %>
   <tr>
     <td>
-      <%= url.url %>
+      <% url = URI.parse(uri.url) %>
+      <a href="<%= uri.url %>"><%= "#{url.scheme}://#{url.host}" %></a>
     </td>
   </tr>
 <% end %>
